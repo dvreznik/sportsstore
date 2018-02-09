@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0FE6F260-4487-45A4-873F-B42D87826F06}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A68DB02-2A00-4871-9244-6C7525493ABD}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SportsStore", "src\SportsStore\SportsStore.xproj", "{149BCF9C-6553-486F-98A8-6B27E0209933}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{149BCF9C-6553-486F-98A8-6B27E0209933}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149BCF9C-6553-486F-98A8-6B27E0209933}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149BCF9C-6553-486F-98A8-6B27E0209933}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149BCF9C-6553-486F-98A8-6B27E0209933}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{149BCF9C-6553-486F-98A8-6B27E0209933} = {0FE6F260-4487-45A4-873F-B42D87826F06}
+	EndGlobalSection
+EndGlobal
