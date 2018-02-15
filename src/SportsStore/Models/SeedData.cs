@@ -25,7 +25,7 @@ namespace SportsStore.Models
                     new Product {
                         Name = "Lifejacket",
                         Description = "Protective and fashionable",
-                        Category = "Watersports ",
+                        Category = "Watersports",
                         Price = 48.95m
                     },
                     new Product {
