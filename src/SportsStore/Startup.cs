@@ -13,7 +13,9 @@ namespace SportsStore
 {
     public class Startup
     {
-        IConfigurationRoot _configuration;
+        
+
+        public IConfigurationRoot _configuration { get; set; }
 
         public Startup(IHostingEnvironment env)
         {
@@ -27,10 +29,11 @@ namespace SportsStore
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options => 
-            options.UseSqlServer(_configuration["Data:SportStoreProducts:ConnectionString"]));
-            services.AddDbContext<AppIdentityDbContext>(options =>
-            options.UseSqlServer(_configuration["Data:SportsStoreIdentity:ConnectionString"]));
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
+            //options.UseSqlServer(_configuration["Data:SportStoreProducts:ConnectionString"]));
+            //services.AddDbContext<AppIdentityDbContext>(options =>
+            //options.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>();
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddTransient<IOrderRepository, EFOrderRepository>();
